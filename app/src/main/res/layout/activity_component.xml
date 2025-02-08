@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".exercise.classroom.graphiccomponent.ComponentActivity">
+
+    <TextView
+        android:id="@+id/tvExample"
+        android:text="Esto es un textview"
+        android:textSize="30sp"
+        android:textColor="@android:color/holo_green_light"
+        android:textStyle="bold"
+        android:background="@android:color/holo_blue_bright"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/etExample"
+        android:hint="Ingresa contraseña"
+        android:inputType="textPassword"
+        android:text="Esto es un texto"
+        android:textSize="18sp"
+        android:textColor="@android:color/holo_blue_bright"
+        android:textColorHint="@android:color/holo_green_light"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvExample"
+        android:layout_width="250dp"
+        android:layout_marginTop="30dp"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btExample"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:textStyle="italic|bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etExample"
+        android:layout_marginTop="30dp"
+        android:text="Siguiente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:id="@+id/ivExample"
+        android:src="@mipmap/ic_launcher"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/btExample"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="150dp"
+        android:layout_height="150dp"/>
+
+    <ImageButton
+        android:id="@+id/ibExample"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivExample"
+        android:layout_marginTop="20dp"
+        android:src="@mipmap/ic_launcher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <CheckBox
+        android:id="@+id/cbExample"
+        app:layout_constraintTop_toBottomOf="@+id/ibExample"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        android:text="¿Tienes tarjeta de crédito?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
