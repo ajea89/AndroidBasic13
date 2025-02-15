@@ -4,4 +4,6 @@
     <string name="label_textview">This is a textview</string>
     <string name="label_put_pass">Insert password</string>
     <string name="label_insert_user">Insert User</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

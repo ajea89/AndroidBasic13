@@ -15,10 +15,10 @@
         android:theme="@style/Theme.AndroidModule1"
         tools:targetApi="31">
         <activity
-            android:name=".exercise.classroom.graphiccomponent.recyclerview.DetailListActivity"
+            android:name=".exercise.classroom.graphiccomponent.fragment.params.SecondParamsActivity"
             android:exported="false" />
         <activity
-            android:name=".exercise.classroom.graphiccomponent.recyclerview.RecyclerviewActivity"
+            android:name=".exercise.classroom.graphiccomponent.fragment.params.ParamsActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,8 +27,22 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".exercise.classroom.graphiccomponent.ComponentActivity"
+            android:name=".exercise.classroom.graphiccomponent.fragment.FragmentCodeActivity"
+            android:exported="true"></activity>
+        <activity
+            android:name=".exercise.classroom.graphiccomponent.fragment.FragmentActivity"
             android:exported="true" />
+        <activity
+            android:name=".exercise.classroom.graphiccomponent.recyclerview.DetailListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".exercise.classroom.graphiccomponent.recyclerview.RecyclerviewActivity"
+            android:exported="true" />
+        <activity
+            android:name=".exercise.classroom.graphiccomponent.ComponentActivity"
+            android:exported="true" >
+
+        </activity>
         <activity
             android:name=".exercise.classroom.graphiccomponent.ConstraintLayoutActivity"
             android:exported="false" />

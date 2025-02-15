@@ -1,41 +1,38 @@
-package com.ajea.androidmodule1.exercise.classroom.graphiccomponent.recyclerview
+package com.ajea.androidmodule1.exercise.classroom.graphiccomponent.fragment.params
 
 import android.os.Build
 import android.os.Bundle
 import android.view.MenuItem
-import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.res.ResourcesCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.ajea.androidmodule1.R
+import com.ajea.androidmodule1.exercise.classroom.graphiccomponent.recyclerview.AnimalEntity
 
-class DetailListActivity : AppCompatActivity() {
+class SecondParamsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        val name  = intent.getStringExtra("EXTRA_NAME")
+        val animal = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU){
+            intent.getSerializableExtra("EXTRA_ANIMAL", AnimalEntity::class.java)
+        }else{
+            intent.getSerializableExtra("EXTRA_ANIMAL") as AnimalEntity
+        }
+
         enableEdgeToEdge()
-        setContentView(R.layout.activity_detail_list)
+        setContentView(R.layout.activity_second_params)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
-        var animal = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU){
-            intent.getSerializableExtra("EXTRA_ANIMAL", AnimalEntity::class.java)
-        }else {
-            intent.getSerializableExtra("EXTRA_ANIMAL") as AnimalEntity
-        }
-
-        supportActionBar?.setTitle(animal?.name)
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-
-        val tvName = findViewById<TextView>(R.id.tvName)
-        tvName.typeface = ResourcesCompat.getFont(this, R.font.bernier_shade_regular)
-
-
-        tvName.text = animal?.name
+        Toast.makeText(this, "name: $name animalName: ${animal?.name} animalColor: ${animal?.color}", Toast.LENGTH_LONG).show()
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

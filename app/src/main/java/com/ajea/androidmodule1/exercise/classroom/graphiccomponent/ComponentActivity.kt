@@ -118,6 +118,14 @@ class ComponentActivity : AppCompatActivity() {
 //        ibExample.setOnClickListener {
 //            Toast.makeText(this, etExample.text, Toast.LENGTH_SHORT).show()
 //        }
+
+        tvExample.setOnClickListener {
+            Toast.makeText(this, "Click en Textview", Toast.LENGTH_SHORT).show()
+        }
+
+        ivExample.setOnClickListener {
+            Toast.makeText(this, "Click en Imageview", Toast.LENGTH_SHORT).show()
+        }
     }
 
     private fun initViews() {
