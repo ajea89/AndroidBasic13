@@ -15,8 +15,11 @@
         android:theme="@style/Theme.AndroidModule1"
         tools:targetApi="31">
         <activity
+            android:name=".exercise.classroom.graphiccomponent.recyclerview.DetailListActivity"
+            android:exported="false" />
+        <activity
             android:name=".exercise.classroom.graphiccomponent.recyclerview.RecyclerviewActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -25,13 +28,13 @@
         </activity>
         <activity
             android:name=".exercise.classroom.graphiccomponent.ComponentActivity"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".exercise.classroom.graphiccomponent.ConstraintLayoutActivity"
             android:exported="false" />
         <activity
             android:name=".exercise.classroom.graphiccomponent.RelativeLayoutActivity"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".exercise.classroom.graphiccomponent.LinearLayoutActivity"
             android:exported="true" />

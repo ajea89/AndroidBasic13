@@ -9,7 +9,7 @@
 
     <TextView
         android:id="@+id/tvExample"
-        android:text="Esto es un textview"
+        android:text="@string/label_textview"
         android:textSize="30sp"
         android:textColor="@android:color/holo_green_light"
         android:textStyle="bold"
@@ -21,7 +21,7 @@
 
     <EditText
         android:id="@+id/etExample"
-        android:hint="Ingresa contraseña"
+        android:hint="@string/label_put_pass"
         android:inputType="textPassword"
         android:text="Esto es un texto"
         android:textSize="18sp"

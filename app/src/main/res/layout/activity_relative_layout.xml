@@ -19,7 +19,7 @@
 
     <EditText
         android:id="@+id/etUser"
-        android:hint="Ingresa usuario"
+        android:hint="@string/label_insert_user"
         android:layout_centerInParent="true"
         android:layout_width="200dp"
         android:layout_height="wrap_content"/>

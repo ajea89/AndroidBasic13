@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">AndroidModule1</string>
+    <string name="label_save">Save</string>
+    <string name="label_textview">This is a textview</string>
+    <string name="label_put_pass">Insert password</string>
+    <string name="label_insert_user">Insert User</string>
 </resources>

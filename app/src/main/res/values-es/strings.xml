@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="label_save">Guardar</string>
+
+
+    <string name="app_name">Modulo Android 1</string>
+    <string name="label_textview">Esto es un textview</string>
+    <string name="label_put_pass">Ingresa contraseña</string>
+    <string name="label_insert_user">Ingresa usuario</string>
+
+</resources>

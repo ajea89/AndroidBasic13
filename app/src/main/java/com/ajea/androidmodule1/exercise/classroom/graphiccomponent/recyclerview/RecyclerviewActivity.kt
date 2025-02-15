@@ -1,6 +1,8 @@
 package com.ajea.androidmodule1.exercise.classroom.graphiccomponent.recyclerview
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -23,7 +25,7 @@ class RecyclerviewActivity : AppCompatActivity() {
         val rvAnimal = findViewById<RecyclerView>(R.id.rvAnimal)
 
         val data = listOf(AnimalEntity("Leon","Amarillo", ""),
-            AnimalEntity("Perro", "Café", ""),
+            AnimalEntity("Perro", "Café", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM1-2B5wjpFuyYrSCslCd0do7Do5-wcCwnOQ&usqp=CAU"),
             AnimalEntity("Gato", "Amarillo", ""),
             AnimalEntity("Jirafa", "Amarillo", ""),
             AnimalEntity("Jirafa", "Amarillo", ""),
@@ -35,6 +37,15 @@ class RecyclerviewActivity : AppCompatActivity() {
             )
 
         val adapter = AnimalAdapter(data)
+        adapter.onItemSelected = { animal ->
+            val intent = Intent(this, DetailListActivity::class.java).apply {
+                putExtra("EXTRA_ANIMAL", animal)
+            }
+
+            startActivity(intent)
+//            Toast.makeText(this, "Animal seleccionado: ${animal.name}", Toast.LENGTH_SHORT).show()
+        }
+
         rvAnimal.adapter = adapter
         rvAnimal.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
     }
